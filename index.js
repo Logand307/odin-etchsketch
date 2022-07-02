@@ -1,12 +1,20 @@
+let counter = 1;
+
 function add() {
   // Create element;
-  var div = document.createElement("div");
+  let container = document.querySelector("#container");
+  let div = document.createElement("div");
+  div.classList.add("new");
 
-  // Set some attributes
-  div.style.width = "200px";
-  div.style.height = "200px";
-  div.style.backgroundColor = "red";
+  // Set  attributes
+  div.style.width = "60px";
+  div.style.height = "60px";
+
+  if (counter < 256) {
+    counter++;
+    window.setTimeout(add, 1);
+  }
 
   // Append the div to the body
-  document.body.appendChild(div);
+  container.appendChild(div);
 }
