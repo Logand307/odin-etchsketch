@@ -1,28 +1,17 @@
-button {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-
-#container {
-  flex-wrap: wrap;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-.new {
-  border: solid 2px black;
-}
-
-#grid {
+.cell {
+  border: 1px solid gray;
+  min-width: 20px;
+  min-height: 20px;
+  display: inline-block;
   background-color: white;
-  display: inline-flex;
   transition: all 0s ease 200s; /*delay 1s*/
 }
 
-#grid:hover {
+#container {
+  text-align: center;
+}
+
+.cell:hover {
   background-color: black;
   transition-delay: 0s;
   visibility: visible;
