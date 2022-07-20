@@ -1,11 +1,13 @@
+
+
 .grid {
-  height: 70vh;
-  width: 80vw;
+  height: 80vh;
+  width: 50vw;
   border: 2px solid black;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
-.newDiv:hover {
+.new:hover {
   background-color: black;
-  transition-delay: 0s;
-  visibility: visible;
 }
