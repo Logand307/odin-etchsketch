@@ -1,39 +1,23 @@
-// let counter = 1;
+let gridContainer = document.querySelector('.grid');
 
-// let answer = parseInt(
-//   prompt("How many squares you would like to have in your Etch-A-Sketch grid? ")
-// );
+let rowtot = 16;
+let celltot = rowtot * rowtot;
 
-const container = document.getElementById("container");
-let rows = document.getElementsByClassName("gridRow");
-let cells = document.getElementsByClassName("cell");
+gridContainer.style.display = 'grid';
+gridContainer.style.gridTemplateRows = `repeat(${rowtot}, 1fr)`;
+gridContainer.style.gridTemplateColumns = `repeat(${rowtot}, 1fr)`;
 
-
-defaultGrid();
-//Creates a default grid sized 16x16 
-function defaultGrid() {
-  makeRows(16);
-  makeColumns(16);
+let row = 1;
+let column = 1;
+for (let i = 1; i <= celltot; i++) {
+  let cell = document.createElement('div');
+  cell.style.border = '1px solid black';
+  cell.style.gridRow = row;
+  cell.style.gridColumn = column;
+  column += 1;
+  if (column === rowtot + 1) {
+    row += 1;
+    column = 1;
+  }
+  gridContainer.appendChild(cell);
 }
-
-//Takes (rows, columns) input and makes a grid
-function makeRows(rowNum) {
-
-  //Creates rows
-  for (let r = 0; r < rowNum; r++) {
-      let row = document.createElement("div");
-      container.appendChild(row).className = "gridRow";
-  };
-};
-
-//Creates columns
-function makeColumns(cellNum) {
-  for (let i = 0; i < rows.length; i++) {
-      for (let j = 0; j < cellNum; j++) {
-          let newCell = document.createElement("div");
-          rows[j].appendChild(newCell).className = "cell";
-          
-      };
-
-  };
-};

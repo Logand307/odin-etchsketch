@@ -1,17 +1,10 @@
-.cell {
-  border: 1px solid gray;
-  min-width: 20px;
-  min-height: 20px;
-  display: inline-block;
-  background-color: white;
-  transition: all 0s ease 200s; /*delay 1s*/
+.grid {
+  height: 70vh;
+  width: 80vw;
+  border: 2px solid black;
 }
 
-#container {
-  text-align: center;
-}
-
-.cell:hover {
+.newDiv:hover {
   background-color: black;
   transition-delay: 0s;
   visibility: visible;
