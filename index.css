@@ -1,13 +1,8 @@
-
-
 .grid {
   height: 80vh;
   width: 50vw;
   border: 2px solid black;
   margin-top: 20px;
   margin-left: 20px;
-}
 
-.new:hover {
-  background-color: black;
 }
